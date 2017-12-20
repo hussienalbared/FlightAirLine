@@ -90,5 +90,8 @@ class flight_userController extends Controller
     public function destroy($id)
     {
         //
+        $x=flight_user::find($id);
+        $x->delete();
+        return $x;
     }
 }
